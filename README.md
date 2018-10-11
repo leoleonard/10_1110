@@ -1,1 +1,1 @@
-# 10_1110
+zadanie domowe - zajęcia 10
