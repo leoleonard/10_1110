@@ -6,10 +6,9 @@ import java.util.ArrayList;
 public class CheckOut {
     public static void main(String[] args) {
 
-        File file = new File("src/three/products.csv");
-
         FileReader fileReader = null;
         try {
+            File file = new File("src/three/products.csv");
             fileReader = new FileReader(file);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
