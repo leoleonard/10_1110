@@ -35,11 +35,12 @@ public class CheckOut {
         }
 
         CheckOut checkout = new CheckOut();
-        System.out.println("Suma wszystkich produktów wynosi " + checkout.totalPrice(table));
-        System.out.println("Najdroższy produkt to " + checkout.expensiveStuff(table).getName());
+        System.out.println("Suma wszystkich produktów wynosi " + checkout.totalPrice(table) + "pln");
+        System.out.println("Najdroższy produkt to " + checkout.expensiveStuff(table).getName() + " - " + checkout.expensiveStuff(table).getPrice() + "pln");
+//        System.out.println(checkout.producentWinner(table));
     }
 
-    double totalPrice(Products[] table) {
+    private double totalPrice(Products[] table) {
         double total = 0;
         for (int i = 0; i < table.length; i++) {
             total += table[i].getPrice();
@@ -47,7 +48,7 @@ public class CheckOut {
         return total;
     }
 
-    Products expensiveStuff(Products[] table) {
+    private Products expensiveStuff(Products[] table) {
         Products products1 = null;
         double max = 0;
 
@@ -59,5 +60,22 @@ public class CheckOut {
         }
         return products1;
     }
+
+//    String producentWinner(Products[] table) {
+//        String producent = null;
+//        String winner = null;
+//        double counter = 0;
+//
+//        for (int i = 0; i < table.length; i++) {
+//            producent = table[i].getProducent();
+//            for (int j = 0; j < table.length; j++) {
+//                if (table[i].getProducent() == table[j].getProducent()) {
+//                    counter++;
+//                }
+//            }
+//        }
+//        return producent;
+//    }
+
 
 }
